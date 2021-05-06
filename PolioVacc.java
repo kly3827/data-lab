@@ -37,11 +37,46 @@ public class PolioVacc {
         System.out.println(temp2.getName()+" has the lowest average rate of "+temp2.findAvg()+"% per year.");
         
         System.out.println();
+        
+        //for fun
+        System.out.println("Compare two countries' vaccination rate");
+        int input1 = input.nextInt();
+        //compare avg vacc rates of 2014-2018 between 2 countries
+        System.out.println("Enter the first country:");
+        String name1 = input.nextLine();
+        input.nextLine();
+        System.out.println("Enter the second country:");
+        String name2 = input.nextLine();
+        Country temp3 = new Country(name1, 0, 0, 0, 0, 0);
+        Country temp4 = new Country(name2, 0, 0, 0, 0, 0);
+        for(int i = 0; i<countries.size(); i++)
+        {
+            if(countries.get(i).getName().equals(name1))
+            {
+                temp3 = countries.get(i);
+            }
+            else if(countries.get(i).getName().equals(name2))
+            {
+                temp4 = countries.get(i);
+            }
+        }
+        if(temp3.findAvg()>temp4.findAvg())
+        {
+            System.out.println(temp3.getName()+" ("+temp3.findAvg()+"%) has a higher average polio immunization rate than "+temp4.getName()+" ("+temp4.findAvg()+"%)");
+        }
+        else if(temp4.findAvg()>temp3.findAvg())
+        {
+            System.out.println(temp4.getName()+" ("+temp4.findAvg()+"%) has a higher average polio immunization rate than "+temp3.getName()+" ("+temp3.findAvg()+"%)");
+        }
+        else
+        {
+            System.out.println(temp3.getName()+" and "+temp4.getName()+" have the same average polio immunization rate ("+temp3.findAvg()+")");
+        }
              
-        System.out.println("Percentage of 1-yr-olds who have received 3 doses of the polio vaccine by year and country");
+        /**System.out.println("Percentage of 1-yr-olds who have received 3 doses of the polio vaccine by year and country");
         for(int i = 0; i<countries.size(); i++){
             System.out.println(countries.get(i));
-        }
+        }*/
         
         
     }
