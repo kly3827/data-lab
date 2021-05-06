@@ -40,7 +40,6 @@ public class PolioVacc {
         
         //for fun
         System.out.println("Compare two countries' vaccination rate");
-        int input1 = input.nextInt();
         //compare avg vacc rates of 2014-2018 between 2 countries
         System.out.println("Enter the first country:");
         String name1 = input.nextLine();
