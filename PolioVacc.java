@@ -42,19 +42,19 @@ public class PolioVacc {
         System.out.println("Compare two countries' vaccination rate");
         //compare avg vacc rates of 2014-2018 between 2 countries
         System.out.println("Enter the first country:");
-        String name1 = input.nextLine();
+        String name1 = input.nextLine().toLowerCase();
         input.nextLine();
         System.out.println("Enter the second country:");
-        String name2 = input.nextLine();
+        String name2 = input.nextLine().toLowerCase();
         Country temp3 = new Country(name1, 0, 0, 0, 0, 0);
         Country temp4 = new Country(name2, 0, 0, 0, 0, 0);
         for(int i = 0; i<countries.size(); i++)
         {
-            if(countries.get(i).getName().equals(name1))
+            if(countries.get(i).getName().toLowerCase().equals(name1))
             {
                 temp3 = countries.get(i);
             }
-            else if(countries.get(i).getName().equals(name2))
+            else if(countries.get(i).getName().toLowerCase().equals(name2))
             {
                 temp4 = countries.get(i);
             }
