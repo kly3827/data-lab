@@ -17,23 +17,19 @@ public class PolioVacc {
         
         System.out.println("Question: Which country has the highest average rate of polio immunizations from 2014-2018?");
         Country temp = new Country("", 0, 0, 0, 0, 0);
+        Country temp2 = new Country("", 101, 101, 101, 101, 101);
         for(int i = 0; i<countries.size(); i++)
         {
             if(temp.findAvg()<countries.get(i).findAvg())
             {
                 temp = countries.get(i);
             }
-        }
-        System.out.println(temp.getName()+" has the highest average rate of "+temp.findAvg()+"% per year.");
-        
-        Country temp2 = new Country("", 101, 101, 101, 101, 101);
-        for(int i = 0; i<countries.size(); i++)
-        {
             if(temp2.findAvg()>countries.get(i).findAvg())
             {
                 temp2 = countries.get(i);
             }
         }
+        System.out.println(temp.getName()+" has the highest average rate of "+temp.findAvg()+"% per year.");
         System.out.println(temp2.getName()+" has the lowest average rate of "+temp2.findAvg()+"% per year.");
         
         System.out.println();
