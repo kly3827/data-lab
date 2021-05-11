@@ -83,7 +83,7 @@ public class PolioVacc {
         }
         else
         {
-            System.out.println(temp3.getName()+" and "+temp4.getName()+" have the same average polio immunization rate ("+temp3.findAvg()+")");
+            System.out.println(temp3.getName()+" and "+temp4.getName()+" have the same average polio immunization rate ("+temp3.findAvg()+"%)");
         }
              
         /**System.out.println("Percentage of 1-yr-olds who have received 3 doses of the polio vaccine by year and country");
